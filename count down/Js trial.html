@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+
+        #countdown {
+            font-size: 7rem;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 0px;
+            border-radius: 0px 0px 0px 0px;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+            border: #000000 solid 20px;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="countdown" class="content"></div>
+
+    <script>
+        const countdownDate = new Date(2023, 12, 31, 23, 59, 59).getTime();
+
+        const countdown = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById('countdown').innerHTML = 'Countdown expired!';
+            }
+        }, 1000);
+    </script>
+
+    <!-- background video-->
+
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="water effect.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+</body>
+
+</html>

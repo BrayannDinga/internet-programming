@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <!-- <script src="https://unpkg.com/feather-icons"></script> -->
+    <script src="https://kit.fontawesome.com/878e5acbab.js">
+    </script>
+</head>
+
+<body>
+    <div class="slideshow-container">
+        <div class="content">
+            <div class="mySlides">
+                <img src="image 1.jpg" alt="Image 1">
+            </div>
+            <div class="mySlides">
+                <img src="image 2.jpg" alt="Image 2">
+            </div>
+            <div class="mySlides">
+                <img src="image 4.jpg" alt="Image 4">
+            </div>
+            <div class="mySlides">
+                <img src="image 5.jpg" alt="Image 5">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class=" prev " onclick="plusSlides(-1) ">&#10094;</a>
+            <!-- Previous button -->
+            <a class="next " onclick="plusSlides(1) ">&#10095;</a>
+            <!-- Next button -->
+
+
+            <!-- Dots -->
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <!-- Dot for the first slide -->
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <!-- Dot for the second slide -->
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <!-- Dot for the fouth slide -->
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <!-- Dot for the fith slide -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>

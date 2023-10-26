@@ -1,0 +1,94 @@
+body {
+    height: 100vh;
+    display: flex;
+    margin-left: 240px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+   background-image: image slider/image 4.jpg;
+}
+
+.slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: 50px;
+    
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+   
+}
+
+.mySlides {
+    display: none;
+    
+}
+
+img {
+    width: 700px;
+    height: 70vh;
+    border-radius: 20px;
+    border: 8px rgb(244, 245, 247) solid;
+}
+
+
+.dot-container {
+    text-align: center;
+    margin-top: 90px;
+    position: absolute;
+    top: 460px;
+    left: 300px;
+}
+
+.dot {
+
+    height: 15px;
+    /* Set the dot's height */
+    width: 15px;
+    /* Set the dot's width */
+    background-color: #bbb;
+    /* Define the default background color */
+    border-radius: 50%;
+    /* Make the dot circular */
+    display: inline-block;
+    /* Display the dots inline */
+    margin: 0 5px;
+    /* Add some space between the dots */
+    cursor: pointer;
+    /* Show a pointer cursor when hovering over the dots */
+}
+
+.dot.active {
+    background-color: #0f23d1;
+    /* Change the background color when the dot is active */
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    padding: 10px;
+    background-color: #7171713a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: -2;
+}
+
+.next {
+    right: -221px;
+}
